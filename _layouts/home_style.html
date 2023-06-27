@@ -108,7 +108,11 @@
                 
             </div>
             <!-- End Serivces Row 1 -->
-      
+            
+            {% for post in page.posts %}
+                {% include article-content.html %}
+            {% endfor %}
+            
         </div>      
     </section>
     <!-- End #services-section -->
