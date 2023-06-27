@@ -5,12 +5,13 @@
 
     <div class="article__wrapper">
 
-        {% if post.picture %}
+        <!-- {% if post.picture %}
           <a href="/product.html" class="article__image" style="background-image: url(assets/img/slider/{{post.picture}})">
           </a>
         {% else %}
           {% assign without-image = 'article-without-image' %}
-        {% endif %}
+        {% endif %} -->
+        <img src="/assets/img/slider/{{ post.picture }}" alt="Feature-img" align="right" width="100%" class="article__image">
 
         <div class="article__content {{ without-image }}">
       
