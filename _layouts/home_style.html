@@ -118,9 +118,9 @@
                 </div>
                 <div>
                     <h2 class="article__title">
-                        <a href="/product.html">{{post.title}}</a>
+                        <a href="/product.html" align="left">{{post.title}}</a>
                     </h2>
-                    <p class="article__excerpt">{% if post.description %}{{ post.description | strip_html | truncate: 185 }}{% endif %}</p>
+                    <p class="article__excerpt" align="left">{% if post.description %}{{ post.description | strip_html | truncate: 185 }}{% endif %}</p>
                 </div>
             </div>
             {% endfor %}
