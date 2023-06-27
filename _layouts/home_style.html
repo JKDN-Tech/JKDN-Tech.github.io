@@ -117,8 +117,10 @@
                     <img src="assets/img/slider/{{ post.picture }}" alt="Feature-img" align="left" width="50%">
                 </div>
                 <div>
-                    <h2 size="6" align="left">{{post.title}}</h2>
-                    <p>{{post.description | strip_html | truncate: 185 }}</p>
+                    <h2 class="article__title">
+                        <a href="/product.html">{{post.title}}</a>
+                    </h2>
+                    <p class="article__excerpt">{% if post.description %}{{ post.description | strip_html | truncate: 185 }}{% endif %}</p>
                 </div>
             </div>
             {% endfor %}
