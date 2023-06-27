@@ -110,9 +110,15 @@
             <!-- End Serivces Row 1 -->
             <p></p>
             {% for post in site.posts %}
-                <img src="assets/img/slider/{{ post.picture }}" alt="Feature-img" align="left" width="50%">
-                <h2 size="6">post.title</h2>
-                <p>post.description</p>
+            <div class="row">
+                <div>
+                    <img src="assets/img/slider/{{ post.picture }}" alt="Feature-img" align="left" width="50%">
+                </div>
+                <div>
+                    <h2 size="6">post.title</h2>
+                    <p>post.description</p>
+                </div>
+            </div>
             {% endfor %}
 
         </div>      
