@@ -118,12 +118,12 @@
             {% for post in site.posts %}
             <div class="row">
                 <div>
-                    <img href="/product.html" src="assets/img/slider/{{ post.picture }}" alt="Feature-img" align="left" width="50%">
+                    <img href="/product.html" src="assets/img/slider/{{ post.picture }}" alt="Feature-img" align="left" width="47%">
                     <!-- <a href="/product.html" class="article__image" style="background-image: url(assets/img/slider/{{post.picture}})"></a> -->
                 </div>
                 <div>
-                    <h2 class="article__title">
-                        <a href="/product.html" align="left">{{post.title}}</a>
+                    <h2 class="article__title" align="left">
+                        <a href="/product.html">{{post.title}}</a>
                     </h2>
                     <p class="article__excerpt" align="left">{% if post.description %}{{ post.description | strip_html | truncate: 185 }}{% endif %}</p>
                 </div>
