@@ -4,7 +4,6 @@
   {% include head.html %}
   {% include header.html %}
   {% include script.html %}
-  {% include /assets/scss/_article.scss %}
 
   <body>
     <!-- Begin #carousel-section -->
@@ -111,7 +110,9 @@
             <!-- End Serivces Row 1 -->
             <p></p>
             {% for post in site.posts %}
-                {% include article-content.html %}
+                <img src="assets/img/slider/{{ post.picture }}" alt="Feature-img" align="left" width="50%">
+                <h2 size="6">post.title</h2>
+                <p>post.description</p>
             {% endfor %}
 
         </div>      
