@@ -118,7 +118,11 @@
             {% for post in site.algos %}
             <div class="row">
                 <div class="col-lg-6">
+                    {% if post.video %}
+                    {{ post.video }}
+                    {% else %}
                     <img href="/product.html" src="assets/img/slider/{{ post.picture }}" alt="Feature-img" align="center" width="100%">
+                    {% endif %}
                     <!-- <a href="/product.html" class="article__image" style="background-image: url(assets/img/slider/{{post.picture}})"></a> -->
                 </div>
                 <div class="col-lg-6">
