@@ -128,7 +128,7 @@
                     <h2 class="article__title" align="left">
                         <a href="/product.html">{{post.title}}</a>
                     </h2>
-                    <p class="article__excerpt" align="left">{% if post.description %}{{ post.description | strip_html | truncate: 185 }}{% endif %}</p>
+                    <p class="article__excerpt" align="left">{% if post.description %}{{ post.description }}{% endif %}</p>
                 </div>
             </div>
             {% endfor %}
