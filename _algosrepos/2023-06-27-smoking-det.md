@@ -1,5 +1,5 @@
 ---
-title: "Face Detection and Tracking"
+title: "Smoking Detection"
 
 description: 
 
