@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+
+  {% include head.html %}
+  {% include header.html %}
+  {% include script.html %}
+
+  <body>
+    <!-- Begin #carousel-section -->
+    <section id="carousel-section" class="section-global-wrapper"> 
+        <div class="container-fluid-kamn">
+            <div class="row">
+                <div id="carousel-1" class="carousel slide" data-ride="carousel">
+
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators visible-lg">
+                        <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-1" data-slide-to="1"></li>
+                        <li data-target="#carousel-1" data-slide-to="2"></li>
+                    </ol>
+        
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <!-- Begin Slide 1 -->
+                        <div class="item active">
+                            <img src="../assets/img/slider/face_algo_slider.png" width="100%" alt="Image of first carousel" align="center">
+                            <div class="carousel-caption">
+                                <h3 class="carousel-title hidden-xs">人脸算法</h3>
+                                <p class="carousel-body">人脸检测 \ 头部姿态 \ 人脸属性 \ 人脸识别</p>
+                            </div>
+                        </div>
+                        <!-- End Slide 1 -->
+
+                        <!-- Begin Slide 2 -->
+                        <div class="item">
+                            <img src="../assets/img/slider/license_plate_slider.png" width="100%" alt="Image of second carousel" align="center">
+                            <div class="carousel-caption">
+                                <h3 class="carousel-title hidden-xs">车牌识别</h3>
+                                <p class="carousel-body">车辆检测 \ 车辆属性 \ 车牌属性 \ 车牌识别</p>
+                            </div>
+                        </div>
+                        <!-- End Slide 2 -->
+
+                        <!-- Begin Slide 3 -->
+                        <div class="item">
+                            <img src="../assets/img/slider/pvc.png" width="100%" alt="Image of third carousel" align="center">
+                            <div class="carousel-caption">
+                                <h3 class="carousel-title hidden-xs">人车非检测</h3>
+                                <p class="carousel-body">人车非检测 \ 目标跟踪 \ 目标计数</p>
+                            </div>
+                        </div>
+                        <!-- End Slide 3 -->
+                    </div>
+        
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-1" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-1" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End #carousel-section -->
+
+
+    <!-- Begin #services-section -->
+    <section id="services" class="services-section section-global-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="services-header">
+                    <h3 class="services-header-title">我们提供</h3>
+                    <p class="services-header-body"><em> 跨平台、易使用、高性能的AI算法开发、部署服务 </em>  </p><hr>
+                </div>
+            </div>
+      
+            <!-- Begin Services Row 1 -->
+            <div class="row services-row services-row-head services-row-1">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="services-group wow animated fadeInLeft" data-wow-offset="40">
+                        <p class="services-icon"><i class="fa fa-android fa-5x"></i>&nbsp;&nbsp;<i class="fa fa-apple fa-5x"></i>&nbsp;&nbsp;<i class="fa fa-windows fa-5x"></i>&nbsp;&nbsp;<i class="fa fa-linux fa-5x"></i></p>
+                        <h4 class="services-title">跨平台</h4>
+                        <p class="services-body">支持 Android、MacOS、Linux、Windows、RTOS 系统平台的算法开发，可用于PC、手机、车机等任何设备.</p>
+                        <p class="services-more"><a href="#">Find Out More</a></p>
+                    </div>
+                </div>
+        
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="services-group wow animated fadeInRight" data-wow-offset="40">
+                        <p class="services-icon"><i class="fa fa-thumbs-o-up fa-5x"></i></p>
+                        <h4 class="services-title">易使用</h4>
+                        <p class="services-body">提供专业、易用、通用的API接口，包括但不限于 C#/C/C++/Java 等编程语言的接口，任何开发人员都可以快速上手.</p>
+                        <p class="services-more"><a href="#">Find Out More</a></p>
+                    </div>        
+                </div>
+        
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="services-group wow animated fadeInRight" data-wow-offset="40">
+                        <p class="services-icon"><i class="fa fa-cubes fa-5x"></i></p>
+                        <h4 class="services-title">高性能</h4>
+                        <p class="services-body">支持 NPU、GPU 等异构平台，对 CPU 也有 neon、simd、avx2 等指令集专门优化，使得设备性能得到充分的发挥.</p>
+                        <p class="services-more"><a href="#">Find Out More</a></p>
+                    </div>
+                </div>
+        
+                
+            </div>
+            <!-- End Serivces Row 1 -->
+            
+        </div>      
+    </section>
+    <!-- End #services-section -->
+
+    <section id="services" class="services-section section-global-wrapper">
+        <div class="container">
+            {% for post in site.algos %}
+            <div class="row">
+                <div class="col-lg-6">
+                    {% if post.video %}
+                    {{ post.video }}
+                    {% else %}
+                    <img href="/product.html" src="assets/img/slider/{{ post.picture }}" alt="Feature-img" align="center" width="100%">
+                    {% endif %}
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="article__title" align="left">
+                        <a href="/product.html">{{post.title}}</a>
+                    </h2>
+                    <p class="article__excerpt" align="left">{% if post.description %}{{ post.description }}{% endif %}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+  </body>
+
+  {% include footer.html %}
+</html>
