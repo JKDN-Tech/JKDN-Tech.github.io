@@ -137,13 +137,13 @@
                     {% if post.video %}
                     {{ post.video }}
                     {% else %}
-                    <img href="/product.html" src="assets/img/slider/{{ post.picture }}" alt="Feature-img"
+                    <img src="assets/img/slider/{{ post.picture }}" alt="Feature-img"
                         align="center" width="100%">
                     {% endif %}
                 </div>
                 <div class="col-lg-6">
                     <h2 class="article__title" align="left">
-                        <a href="/product.html">{{post.title}}</a>
+                        <a href="/alogrepos.html">{{post.title}}</a>
                     </h2>
                     <p class="article__excerpt" align="left">{% if post.description %}{{ post.description }}{% endif %}
                     </p>
@@ -151,6 +151,7 @@
             </div>
             <p></p>
             {% endfor %}
+            <p class="article__title"><a href="/alogrepos.html">Find Out More</a></p>
         </div>
     </section>
 
