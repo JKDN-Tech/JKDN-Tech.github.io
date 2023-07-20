@@ -1,0 +1,24 @@
+---
+layout: default_style
+permalink: /algorepos
+published: true
+---
+
+<!-- Main Container -->
+<div id="banners"></div>
+<div class="container">
+  {% for post in site.algosrepos %}
+  <div class="blog-post">
+      <h1 class="blog-title">
+        <i class="fa fa-hand-o-right"></i>
+        {{ post.title }}
+      </h1>
+      <br>
+      <img src="{{ post.picture }}" alt="Feature-img" align="right" width="100%" class="blog-image">
+      <br>
+      <p>{{ post.description }}</p>  
+    </div>
+    <hr>
+  {% endfor %}
+</div>
+<!--End Main Container -->
